@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Asfa Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+        .active-tab { display: block; }
+        .tab-contents { display: none; }
+        .active-link { font-weight: bold; }
+        .fa-facebook {
+            color: blue;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"> 
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#about">Education</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#cv">Resume</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                 
+
+                <h1>Hello,<br> I'm <span>Asfa</span> Khanum</h1>
+            </div>
+        </div>
+    </div>
+     
+     
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1"><img src="image.jpg" alt="Asfa"></div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, I am Asfa Khanum from Bangalore,<br><br>
+                    Aspiring Full-Stack Developer <span style=" color:#ff004f;"> | </span> Enthusiastic Java Programmer <span style=" color:#ff004f;"> | </span>Enthusiastic Web Developer</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Languages:</span> <br> Java <br> C </li><br>
+                        
+                            <li><span>Web developement language:</span> <br> HTML <br> CSS <br> JavaScript </li><br>
+                             <li><span>Database Management:</span> <br>MySQL<br>SQL</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span> Java Full Stack Intern Destination Technology, Bangalore </span>
+                                <br>June 2024-Present<br>
+                                • Developed a personal portfolio website leveraging HTML, CSS, and JavaScript to highlight my projects,
+                                skills, and professional background.<br>
+                                • Developed a quiz application using java, showcase proficiency in backend development</li>
+                                <li>
+                                    <br><br>
+                                   <span>  Java Full Stack Intern, ShriTEK Innovations</span><br> August 2023 - September 2023 <br>
+                                • Gained hands-on experience in Java, C, SQL, Jira and JDBC
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020-2024</span><br>Computer Science Engineering <br>Shridevi Institute of Engineering and Technology, Tumkur<br><span>CGPA: </span>8.95</li><br>
+                            <li><span>2018-2020</span><br>12 Science from department of pre-university Education<br>Ranganatha PU College, Sira<br><span>Percentage: </span>85%</li><br>
+                            <li><span>2018</span><br>10th from Karnataka Secondary Education Examination Board <br>Malnad English High School, Sira<br><span>Percentage: </span>87%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(event, tabname) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+                tabcontent.style.display = "none";
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+            document.getElementById(tabname).style.display = "block";
+        }
+
+        // Ensure the default active tab content is displayed
+        document.getElementById("skills").style.display = "block";
+    </script> 
+ 
+<!---work-->
+    
+            <div id="portfolio"> 
+            <h1 style="text-align:center; color: white;"><i>Look at Our Projects</i></h1>
+
+<div class="main">
+    <div class="project">
+        <img class="i" src="ca.jpg" alt="Library Management System">
+        <p><b>Description</b>
+            <a href="https://asfakhanum789.github.io/Calculator/"><i class="fas fa-external-link-alt"></i></a>
+        </p></p><br>
+        <p style="width: 300px;">Streamline your calculations with our straightforward calculator app. Add, subtract, multiply, and divide with ease. Featuring a user-friendly interface and essential functions, it's the perfect tool for quick and accurate math tasks on the go</p>
+    </div>
+    <div class="project">
+        <img class="i" src="ge.jpg" alt="General Project">
+        <p><b>Description</b>
+            <a href="https://github.com/Asfakhanum789/GDM"><i class="fas fa-external-link-alt"></i></a></p><br>
+        <p style="width: 300px;"> Developed a predictive model for gestational diabetes mellitus using Long Short-Term Memory (LSTM) neural networks, achieving 97% accuracy. </p>
+    </div>
+    <div class="project">
+        <img class="i" src="l.jpg" alt="Library Management System">
+        <p><b>Description</b><br><br>
+            
+        <p style="width: 300px;">Created a database-driven application using HTML, CSS, PHP, and MySQL Features modules for managing
+            book catalogs and member registrations</p>
+    </div>
+</div>
+
+</div>       
+          
+    
+
+    <!----------certificates------------>
+    <div id="certificates">
+        <div class="container">
+            <header>
+                <nav>
+                    <div class="menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </header>
+            <main>
+                <section class="certificates">
+                    <h2>Check Out</h2>
+                    <h1>My Certificate</h1>
+                    <p>I have done various programming courses to increase my programming skills and I'm sharing few of them</p>
+                    <div class="certificates-grid">
+                        <div class="certificate">
+                            <img src="j.jpg" alt="Java Programming Certificate">
+                            <p>Java Programming</p>
+                            <span>NPTEL</span>
+                        </div>
+                        <div class="certificate">
+                            <img src="p.jpg" alt="Programming With Python Certificate">
+                            <p>Programming With Python</p>
+                            <span>GOOGLE</span>
+                        </div>
+                        <div class="certificate">
+                            <img src="ML.jpg" alt="Machine Learning Introduction to Everyone<">
+                            <p>Machine Learning Introduction to Everyone</p>
+                            <span>IBM</span>
+                        </div>
+                    </div>
+                
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!----------contact me------------>
+    <div id="contact">
+        <div class="container">
+            <div class="row"> 
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i>asfakhanum679@gmail.com</p>
+                <p> <i class="fas fa-phone-square-alt"></i>8147452998</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/asfa-khanum-33b51228b"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://wa.me/8147452998"><i class="fa-brands fa-whatsapp"></i></a>
+                     <a href="https://github.com/Asfakhanum789"><i class="fab fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <a href="https://drive.google.com/file/d/1PEYvlmAX9kekVVgsYgr6dYIQhuocw1xL/view?usp=sharing"id="cv" class="btn" >Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name "required>
+                    
+                    <input type="text" name="Email" placeholder="Your email "required>
+                    <textarea name="Message" rows="6" placeholder="your Message"></textarea>
+                    <button type ="submit" class="btn">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxMsBxdWMY3Oh-Ix_JkuUh1Tn0qtSCBoYpDkDNpLuqR2dpWrrChgqCVjhuESEPKpFtplg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>  {
+                msg.innerHTML="Message sent Successfully"
+                setTimeout(function(){
+                    msg.innerHTML=" "
+                },5000)
+                form.reset()
+            })
+
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+       
+
+</body>
+</html>

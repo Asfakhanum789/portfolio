@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #191818;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #f04848;
+    margin-bottom: 1em;
+}
+
+.slider {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.slides {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    transition: margin-left 2s;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-auto, .nav-manual {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    bottom: 10px;
+}
+
+.nav-auto div, .nav-manual .manual-btn {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background 0.5s;
+}
+
+.nav-auto div:hover, .nav-manual .manual-btn:hover {
+    background: #fff;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -75%;
+}
+
+#radio1:checked ~ .nav-manual .manual-btn:nth-child(1),
+#radio2:checked ~ .nav-manual .manual-btn:nth-child(2),
+#radio3:checked ~ .nav-manual .manual-btn:nth-child(3),
+#radio4:checked ~ .nav-manual .manual-btn:nth-child(4) {
+    background: #fff;
+}
+
+.project-info, .project-detail {
+    margin-bottom: 20px;
+}
+
+.project-info h3, .project-detail h3 {
+    margin-bottom: 10px;
+}
+
+.project-info ul {
+    list-style-type: none;
+}
+
+.project-info li {
+    margin-bottom: 5px;
+}
+
+/* work*/
+.project{
+    height:150px;
+    width:200px;
+}
+.pmain{
+    display:flex;
+    justify-content:center;
+    text-align: center;
+    align-items:center;
+    
+}
